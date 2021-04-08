@@ -1,0 +1,7 @@
+- name: Check for current installed Microsoft .NET Framework {{ min_dotnet_version }} version
+  win_reg_stat:
+    path: HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
+    name: Version
+  register: dotnet_version
+  failed_when: dotnet_version.value is version(min_dotnet_version, operator='<', strict=True)
+- debug: var=dotnet_version.value

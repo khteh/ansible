@@ -1,0 +1,6 @@
+- name: Validate Powershell is at least version {{ min_powershell_version }}
+  raw: '$PSVersionTable.PSVersion.Major'
+  register: ps_version
+  failed_when: "ps_version.stdout | trim | int < min_powershell_version"
+  changed_when: "ps_version.stdout | trim | int > min_powershell_version"
+- debug: var=ps_version.stdout

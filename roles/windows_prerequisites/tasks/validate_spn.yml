@@ -1,0 +1,13 @@
+- name: Veify if user {{ ansible_user }} SPN for Kerberos Authentication
+  win_shell: setspn -l {{ ansible_user.split('@').0 }}
+  register: result
+  failed_when: result is regex('^.*(failed|error|fault).*$', ignorecase=true)
+  changed_when: result is not regex('^.*(failed|error|fault).*$', ignorecase=true)
+- debug: var=result
+
+- name: Veify if host {{ inventory_hostname }} SPN for Kerberos Authentication
+  win_shell: setspn -l {{ inventory_hostname.split('@').0 }}
+  register: result
+  failed_when: result is regex('^.*(failed|error|fault).*$', ignorecase=true)
+  changed_when: result is not regex('^.*(failed|error|fault).*$', ignorecase=true)
+- debug: var=result

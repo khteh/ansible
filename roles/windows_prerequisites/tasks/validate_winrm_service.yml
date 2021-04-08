@@ -1,0 +1,14 @@
+- name: Validate WinRM service status
+  win_service:
+    name: "{{ item }}"
+    state: started
+  register: service_info
+  with_items:
+  - WinRM
+#- debug: var=service_info
+
+- name: Validate active winrm listener
+  win_shell: winrm enumerate winrm/config/Listener
+  register: result
+  failed_when: result.stdout is regex('^.*(failed|error|fault).*$', ignorecase=true) and result.stdout is search("Enabled = true", ignorecase=true)
+#- debug: var=result.stdout

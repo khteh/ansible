@@ -1,0 +1,2 @@
+min_powershell_version: "{{ var_min_powershell_version }}"
+min_dotnet_version: "{{ var_min_dotnet_version }}"

@@ -1,0 +1,9 @@
+- name: echo Hello World!!!
+  action: command echo "Hello World!!!"
+  register: hello
+
+- debug: msg="{{ hello.stdout }}"
+  when: not ansible_check_mode
+  
+- debug: msg="{{ hello.stderr }}"
+  when: not ansible_check_mode

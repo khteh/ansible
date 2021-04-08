@@ -1,0 +1,18 @@
+ansible_user: user@domain.com
+ansible_winrm_realm: domain.com
+ansible_port: 5985
+ansible_connection: winrm
+ansible_winrm_transport: ntlm
+ansible_winrm_scheme: http
+ansible_winrm_operation_timeout_sec: 60
+ansible_winrm_read_timeout_sec: 60
+var_min_powershell_version: 4
+var_min_dotnet_version: '4.6.2'
+# Kerberos configurations:
+#ansible_winrm_server_cert_validation: ignore
+#ansible_winrm_transport: kerberos
+#ansible_winrm_service: HOST
+#ansible_winrm_kerberos_hostname_override: other.domain.com
+#ansible_winrm_kerberos_delegation: true
+#ansible_winrm_kinit_mode: managed
+#ansibie_winrm_message_encryption: auto

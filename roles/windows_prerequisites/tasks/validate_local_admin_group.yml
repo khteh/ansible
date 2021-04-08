@@ -1,0 +1,5 @@
+- name: Verify user {{ ansible_user }} is part of local administrators group
+  win_shell: net localgroup Administrators
+  register: Administrators
+  failed_when: Administrators.stdout_lines is not search(ansible_user.split('@').0, ignorecase=true)
+#- debug: var=Administrators.stdout_lines
