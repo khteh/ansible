@@ -1,0 +1,10 @@
+- hosts: local
+
+  tasks:
+    - name: Print variables
+      ansible.builtin.debug:
+        msg: "{{ var_username }}:{{ var_password }}"
+
+  roles:
+  - common
+  - gitpull

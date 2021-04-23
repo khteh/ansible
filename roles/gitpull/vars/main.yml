@@ -1,0 +1,4 @@
+username: "{{ var_username }}"
+password: "{{ var_password }}"
+repository: "{{ var_repository }}"
+destination: "{{ var_destination }}"

@@ -1,0 +1,5 @@
+- name: Get latest code from repository
+  git:
+    repo: "https://{{ username }}:{{ password }}@{{ repository }}"
+    dest: "{{ destination }}"
+    force: yes

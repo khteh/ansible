@@ -1,0 +1,3 @@
+var_username: khteh
+var_repository: github.com/khteh/ansible.git
+var_destination: /tmp/ansible
