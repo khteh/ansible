@@ -1,3 +1,9 @@
+ansible_python_interpreter: /usr/bin/python3
 var_username: khteh
 var_repository: github.com/khteh/ansible.git
 var_destination: /tmp/ansible
+keyname: aws_ec2_ssh_key
+instance_type: t2.micro
+vpc_subnet_id: subnet-0b2952ab4446ca3c6
+image: ami-04d9e855d716f9c99
+region: ap-southeast-1

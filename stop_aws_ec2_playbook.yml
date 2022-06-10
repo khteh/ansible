@@ -1,0 +1,21 @@
+- hosts: local
+  gather_facts: false
+
+  tasks:
+    - name: Stop ALL EC2 instances
+      block:
+        - name: Get Running instance Info
+          ec2_instance_info:
+          register: ec2info
+        - name: Terminate EC2 instance
+          tags: terminate_ec2
+          ec2:
+            instance_ids: "{{item.instance_id}}"
+            region: "{{ region }}"
+            state: absent
+            wait: yes
+          with_items: "{{ec2info.instances}}"
+      tags: ["never", "stop_all_ec2"]
+  roles:
+    - common
+#    - gitpull
