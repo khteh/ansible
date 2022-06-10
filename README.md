@@ -34,3 +34,23 @@
 - Variables:
   - min_powershell_version
   - min_dotnet_version
+
+### AWS
+
+- To view AWS EC2 resources:
+
+```
+$ ansible-playbook -i localhost.yml aws_ec2_info.yml
+```
+
+- To start AWS EC2 instance:
+
+```
+$ ansible-playbook -i localhost.yml start_aws_ec2_playbook.yml --tags=launch_ec2
+```
+
+- To stop ALL AWS EC2 instances:
+
+```
+$ ansible-playbook -i localhost.yml stop_aws_ec2_playbook.yml --tags=stop_all_ec2
+```

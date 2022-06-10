@@ -1,0 +1,3 @@
+- include: view.yml
+- include: launch_ec2.yml
+- include: terminate_ec2.yml

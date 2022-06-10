@@ -3,7 +3,7 @@ dependencies: []
 galaxy_info:
   description: Validate prerequisites of windows
   company: Kok How's Corporation
-  min_ansible_version: 2.6
+  min_ansible_version: 2.10.8
   galaxy_tags:
     - windows
     - service

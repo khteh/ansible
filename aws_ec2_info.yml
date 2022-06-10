@@ -2,17 +2,6 @@
   gather_facts: false
 
   tasks:
-    # Block is a Group of Tasks combined together
-    - name: Get Info Block
-      block:
-        - name: Get Running instance Info
-          ec2_instance_info:
-          register: ec2info
-        - name: Print info
-          debug: var="ec2info.instances"
-      # By specifying always on the tag,
-      # I let this block to run all the time by module_default
-      # this is for security to net create ec2 instances accidentally
-      tags: ["always", "getinfoonly"]
+
   roles:
-    - common
+    - aws

@@ -1,0 +1,11 @@
+- name: View AWS resources
+  block:
+    - name: Get AWS EC2 info
+      ec2_instance_info:
+      register: ec2info
+    - name: Print AWS EC2 info
+      debug: var="ec2info.instances"
+  # By specifying always on the tag,
+  # I let this block to run all the time by module_default
+  # this is for security to net create ec2 instances accidentally
+  tags: ["always", "getinfoonly"]

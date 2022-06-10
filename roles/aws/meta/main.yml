@@ -1,10 +1,10 @@
 dependencies: []
 
 galaxy_info:
-  description: git pull from playbook repository
+  description: View, create and delete AWS resources
   company: MyCompany Pte. Ltd.
   min_ansible_version: 2.10.8
   galaxy_tags:
-    - gitpull
+    - aws
 
 allow_duplicates: true
