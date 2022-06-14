@@ -3,7 +3,7 @@
     - name: Get Running instance Info
       ec2_instance_info:
       register: ec2info
-    - name: Terminate EC2 instance
+    - name: Terminate EC2 instances
       tags: terminate_ec2
       ec2:
         instance_ids: "{{item.instance_id}}"
