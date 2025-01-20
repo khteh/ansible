@@ -42,7 +42,12 @@
 ## Local playbook
 
 - Create an encrypted variable data file called `group_vars/local/.local_vault.yml` with the vault-id `local` and vault password stored in `.vault-secret`. The content of the file should include all the variables' `key: value` pairs. You can add new variables or replace the default ones in `group_vars/local/local.yml`.
-- Command: `$ ansible-vault create --vault-id local@.vault-secret group_vars/local/.local_vault.yml`
+- Command:
+
+```
+$ ansible-vault create --vault-id local@.vault-secret group_vars/local/.local_vault.yml
+```
+
 - Content:
 
 ```
