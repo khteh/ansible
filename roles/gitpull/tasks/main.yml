@@ -1,1 +1,1 @@
-- include: gitpull.yml
+- import_tasks: gitpull.yml

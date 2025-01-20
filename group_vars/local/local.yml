@@ -1,6 +1,7 @@
 ansible_python_interpreter: /usr/bin/python3
 var_username: khteh
-var_repository: github.com/khteh/ansible.git
+var_password: <FIXME>
+var_repository: ansible.git
 var_destination: /tmp/ansible
 var_keyname: aws_ec2_ssh_key
 var_instance_type: t2.micro

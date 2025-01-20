@@ -1,5 +1,5 @@
-- include: validate_powershell_version.yml
-- include: validate_dotnet_version.yml
-- include: validate_winrm_service.yml
-- include: validate_local_admin_group.yml
-- include: validate_spn.yml #"Access denied when trying with NTLM"
+- import_tasks: validate_powershell_version.yml
+- import_tasks: validate_dotnet_version.yml
+- import_tasks: validate_winrm_service.yml
+- import_tasks: validate_local_admin_group.yml
+- import_tasks: validate_spn.yml #"Access denied when trying with NTLM"

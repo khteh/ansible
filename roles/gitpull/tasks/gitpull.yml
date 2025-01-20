@@ -1,5 +1,5 @@
 - name: Get latest code from repository
   git:
-    repo: "https://{{ username }}:{{ password }}@{{ repository }}"
+    repo: "https://{{ username }}:{{ password }}@github.com/{{ username }}/{{ repository }}"
     dest: "{{ destination }}"
     force: yes
