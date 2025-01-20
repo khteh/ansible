@@ -3,8 +3,8 @@
   tasks:
     - name: Print variables
       ansible.builtin.debug:
-        msg: "{{ var_username }}:{{ var_password }}"
+        msg: "Syncing https://{{ username }}:{{ password }}@github.com/{{ username }}/{{ repository }} to {{ destination}}"
 
   roles:
-  - common
-  - gitpull
+    - common
+    - gitpull
